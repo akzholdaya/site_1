@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STL | Клубтар</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e3a8a);
+      color: white;
+      padding: 20px;
+    }
+    .club {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #60a5fa;
+    }
+    h4 {
+      margin-top: 20px;
+      color: #93c5fd;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .club-info p {
+      margin: 10px 0 20px;
+    }
+    .youth-logo {
+      margin-top: 10px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+    <nav style="position: sticky; top: 0; background-color: #1e3a8a; padding: 10px; z-index: 1000;">
+  <ul style="display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 0;">
+    <li><a href="#psg" style="color: white;">PSG</a></li>
+    <li><a href="#juventus" style="color: white;">Juventus</a></li>
+    <li><a href="#bayern" style="color: white;">Bayern</a></li>
+    <li><a href="#barcelona" style="color: white;">Barcelona</a></li>
+    <li><a href="#realmadrid" style="color: white;">Real Madrid</a></li>
+    <li><a href="#liverpool" style="color: white;">Liverpool</a></li>
+    <li><a href="#mancity" style="color: white;">Man City</a></li>
+    <li><a href="#manutd" style="color: white;">Man United</a></li>
+    <li><a href="#realsociedad" style="color: white;">Sociedad</a></li>
+    <li><a href="#bayer" style="color: white;">Bayer 04</a></li>
+    <li><a href="#acmilan" style="color: white;">AC Milan</a></li>
+    <li><a href="#atletico" style="color: white;">Atletico</a></li>
+  </ul>
+</nav>
+<div class="club" id="psg">
+<!-- PSG клубы -->
+</div>
+<input type="text" id="searchInput" placeholder="Ойыншы немесе клуб іздеу..." style="width: 100%; padding: 10px; margin: 20px 0;">
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    const filter = this.value.toLowerCase();
+    const clubs = document.querySelectorAll('.club');
+    clubs.forEach(club => {
+      const text = club.innerText.toLowerCase();
+      club.style.display = text.includes(filter) ? 'block' : 'none';
+    });
+  });
+</script>
+transform: perspective(1000px) rotateY(0deg);
+transition: transform 0.5s ease;
+.club:hover {
+  transform: perspective(1000px) rotateY(1deg) scale(1.02);
+  box-shadow: 0 0 20px #60a5fa;
+}
+<section style="margin-top: 40px;">
+  <h2>⚽ Жаңалықтар</h2>
+  <div style="background-color: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px;">
+    <h4>🔴 PSG Mbappe-мен келісімшартты ұзартпақшы</h4>
+    <p>Клуб 2026 жылға дейін келіссөз жүргізіп жатыр...</p>
+  </div>
+</section>
+<section style="margin-top: 40px;">
+  <h2>🏆 Чемпиондар Лигасы Кестесі</h2>
+  <p>Кесте жуық арада қосылады.</p>
+</section>
+
+<section id="stats">
+  <h2>Трансфер статистикасы</h2>
+  <ul>
+    <li>Барлығы: 120 трансфер</li>
+    <li>Ең қымбат трансфер: Kylian Mbappé — €200M</li>
+    <li>Орташа трансфер: €36M</li>
+  </ul>
+</section>
+<section id="player-of-month">
+  <h2>Айдың үздік ойыншысы кім?</h2>
+  <form>
+    <input type="radio" name="player" value="mbappe"> Kylian Mbappé<br>
+    <input type="radio" name="player" value="bellingham"> Jude Bellingham<br>
+    <input type="radio" name="player" value="vinicius"> Vinícius Júnior<br><br>
+    <button type="submit">Дауыс беру</button>
+  </form>
+</section>
+  <h1>Клубтар тізімі</h1>
+
+  <!-- PSG -->
+  <div class="club">
+    <h2>Paris Saint-Germain (PSG)</h2>
+    <div class="club-info">
+      <p>Францияның ең мықты клубтарының бірі. Жастар академиясы – Camp des Loges.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Gianluigi Donnarumma (Қақпашы)</li>
+        <li>№2 — Achraf Hakimi (Қорғаушы)</li>
+        <li>№3 — Presnel Kimpembe (Қорғаушы)</li>
+        <li>№4 — Milan Škriniar (Қорғаушы)</li>
+        <li>№5 — Marquinhos (Қорғаушы)</li>
+        <li>№6 — Marco Verratti (Жартылай қорғаушы)</li>
+        <li>№7 — Kylian Mbappé (Шабуылшы)</li>
+        <li>№8 — Fabián Ruiz (Жартылай қорғаушы)</li>
+        <li>№9 — Gonçalo Ramos (Шабуылшы)</li>
+        <li>№10 — Ousmane Dembélé (Шабуылшы)</li>
+        <li>№11 — Randal Kolo Muani (Шабуылшы)</li>
+        <li>№12 — Carlos Soler (Жартылай қорғаушы)</li>
+        <li>№13 — Keylor Navas (Қақпашы)</li>
+        <li>№14 — Danilo Pereira (Жартылай қорғаушы)</li>
+        <li>№15 — Nuno Mendes (Қорғаушы)</li>
+        <li>№16 — Layvin Kurzawa (Қорғаушы)</li>
+        <li>№17 — Vitinha (Жартылай қорғаушы)</li>
+        <li>№18 — Manuel Ugarte (Жартылай қорғаушы)</li>
+        <li>№19 — Nordi Mukiele (Қорғаушы)</li>
+        <li>№20 — Hugo Ekitike (Шабуылшы)</li>
+        <li>№21 — Lee Kang-in (Жартылай қорғаушы)</li>
+        <li>№22 — Bradley Barcola (Шабуылшы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Warren Zaïre-Emery (Жартылай қорғаушы)</li>
+        <li>№31 — Ismaël Gharbi (Жартылай қорғаушы)</li>
+        <li>№32 — El Chadaille Bitshiabu (Қорғаушы)</li>
+        <li>№33 — Ilyes Housni (Шабуылшы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg" alt="PSG Logo" class="youth-logo">
+    </div>
+  </div>
+
+  <!-- Juventus -->
+  <div class="club">
+    <h2>Juventus</h2>
+    <div class="club-info">
+      <p>Италияның әйгілі клубы. Жастар академиясы – Juventus Next Gen.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Wojciech Szczęsny (Қақпашы)</li>
+        <li>№2 — Mattia De Sciglio (Қорғаушы)</li>
+        <li>№3 — Bremer (Қорғаушы)</li>
+        <li>№4 — Danilo (Қорғаушы)</li>
+        <li>№5 — Manuel Locatelli (Жартылай қорғаушы)</li>
+        <li>№6 — Alex Sandro (Қорғаушы)</li>
+        <li>№7 — Federico Chiesa (Шабуылшы)</li>
+        <li>№8 — Weston McKennie (Жартылай қорғаушы)</li>
+        <li>№9 — Dušan Vlahović (Шабуылшы)</li>
+        <li>№10 — Paul Pogba (Жартылай қорғаушы)</li>
+        <li>№11 — Moise Kean (Шабуылшы)</li>
+        <li>№12 — Adrien Rabiot (Жартылай қорғаушы)</li>
+        <li>№13 — Mattia Perin (Қақпашы)</li>
+        <li>№14 — Samuel Iling-Junior (Жартылай қорғаушы)</li>
+        <li>№15 — Andrea Cambiaso (Қорғаушы)</li>
+        <li>№16 — Fabio Miretti (Жартылай қорғаушы)</li>
+        <li>№17 — Arkadiusz Milik (Шабуылшы)</li>
+        <li>№18 — Hans Nicolussi Caviglia (Жартылай қорғаушы)</li>
+        <li>№19 — Timothy Weah (Қорғаушы)</li>
+        <li>№20 — Nicolò Fagioli (Жартылай қорғаушы)</li>
+        <li>№21 — Dean Huijsen (Қорғаушы)</li>
+        <li>№22 — Filip Kostić (Жартылай қорғаушы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Kenan Yıldız (Жартылай қорғаушы)</li>
+        <li>№31 — Matías Soulé (Шабуылшы)</li>
+        <li>№32 — Joseph Nonge (Жартылай қорғаушы)</li>
+        <li>№33 — Tommaso Barbieri (Қорғаушы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Juventus_FC_2017_logo.svg" alt="Juventus Logo" class="youth-logo">
+    </div>
+  </div>
+
+  <!-- Bayern -->
+  <div class="club">
+    <h2>FC Bayern Munich</h2>
+    <div class="club-info">
+      <p>Германияның үздік клубтарының бірі. Жастар академиясы – Bayern Campus.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Manuel Neuer (Қақпашы)</li>
+        <li>№2 — Dayot Upamecano (Қорғаушы)</li>
+        <li>№3 — Kim Min-jae (Қорғаушы)</li>
+        <li>№4 — Matthijs de Ligt (Қорғаушы)</li>
+        <li>№5 — Alphonso Davies (Қорғаушы)</li>
+        <li>№6 — Joshua Kimmich (Жартылай қорғаушы)</li>
+        <li>№7 — Serge Gnabry (Шабуылшы)</li>
+        <li>№8 — Leon Goretzka (Жартылай қорғаушы)</li>
+        <li>№9 — Harry Kane (Шабуылшы)</li>
+        <li>№10 — Leroy Sané (Шабуылшы)</li>
+        <li>№11 — Kingsley Coman (Шабуылшы)</li>
+        <li>№12 — Noussair Mazraoui (Қорғаушы)</li>
+        <li>№13 — Eric Maxim Choupo-Moting (Шабуылшы)</li>
+        <li>№14 — Jamal Musiala (Жартылай қорғаушы)</li>
+        <li>№15 — Raphaël Guerreiro (Қорғаушы)</li>
+        <li>№16 — Bouna Sarr (Қорғаушы)</li>
+        <li>№17 — Bryan Zaragoza (Шабуылшы)</li>
+        <li>№18 — Aleksandar Pavlović (Жартылай қорғаушы)</li>
+        <li>№19 — Tarek Buchmann (Қорғаушы)</li>
+        <li>№20 — Gabriel Vidović (Жартылай қорғаушы)</li>
+        <li>№21 — Sven Ulreich (Қақпашы)</li>
+        <li>№22 — Thomas Müller (Жартылай қорғаушы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Arijon Ibrahimović (Жартылай қорғаушы)</li>
+        <li>№31 — Paul Wanner (Жартылай қорғаушы)</li>
+        <li>№32 — Lovro Zvonarek (Жартылай қорғаушы)</li>
+        <li>№33 — Tarek Buchmann (Қорғаушы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_München_logo_%282017%29.svg" alt="Bayern Logo" class="youth-logo">
+    </div>
+  </div>
+</body>
+</html>
+  <!-- Barcelona -->
+  <div class="club">
+    <h2>FC Barcelona</h2>
+    <div class="club-info">
+      <p>Испаниялық ең әйгілі клубтардың бірі. Жастар академиясы – La Masia.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Marc-André ter Stegen (Қақпашы)</li>
+        <li>№2 — Jules Koundé (Қорғаушы)</li>
+        <li>№3 — Ronald Araújo (Қорғаушы)</li>
+        <li>№4 — Andreas Christensen (Қорғаушы)</li>
+        <li>№5 — Íñigo Martínez (Қорғаушы)</li>
+        <li>№6 — Frenkie de Jong (Жартылай қорғаушы)</li>
+        <li>№7 — João Félix (Шабуылшы)</li>
+        <li>№8 — Pedri (Жартылай қорғаушы)</li>
+        <li>№9 — Robert Lewandowski (Шабуылшы)</li>
+        <li>№10 — Anssumane Fati (Шабуылшы)</li>
+        <li>№11 — Raphinha (Шабуылшы)</li>
+        <li>№12 — João Cancelo (Қорғаушы)</li>
+        <li>№13 — Iñaki Peña (Қақпашы)</li>
+        <li>№14 — Gavi (Жартылай қорғаушы)</li>
+        <li>№15 — Marcos Alonso (Қорғаушы)</li>
+        <li>№16 — Fermín López (Жартылай қорғаушы)</li>
+        <li>№17 — Oriol Romeu (Жартылай қорғаушы)</li>
+        <li>№18 — Alejandro Balde (Қорғаушы)</li>
+        <li>№19 — Ferran Torres (Шабуылшы)</li>
+        <li>№20 — Vitor Roque (Шабуылшы)</li>
+        <li>№21 — Sergi Roberto (Жартылай қорғаушы)</li>
+        <li>№22 — Lamine Yamal (Шабуылшы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Marc Casadó (Жартылай қорғаушы)</li>
+        <li>№31 — Pau Cubarsí (Қорғаушы)</li>
+        <li>№32 — Héctor Fort (Қорғаушы)</li>
+        <li>№33 — Noah Darvich (Жартылай қорғаушы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="Barcelona Logo" class="youth-logo">
+    </div>
+  </div>
+
+  <!-- Жалғастыру: Real Madrid, Liverpool, Man City, Man United, Real Sociedad, Bayer 04, Milan, Atlético Madrid -->
+</body>
+</html>
+  <!-- Real Madrid -->
+  <div class="club">
+    <h2>Real Madrid</h2>
+    <div class="club-info">
+      <p>Әлемдегі ең табысты клубтардың бірі. Жастар академиясы — La Fábrica.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Thibaut Courtois (Қақпашы)</li>
+        <li>№2 — Dani Carvajal (Қорғаушы)</li>
+        <li>№3 — Éder Militão (Қорғаушы)</li>
+        <li>№4 — David Alaba (Қорғаушы)</li>
+        <li>№5 — Jude Bellingham (Жартылай қорғаушы)</li>
+        <li>№6 — Nacho Fernández (Қорғаушы)</li>
+        <li>№7 — Vinícius Júnior (Шабуылшы)</li>
+        <li>№8 — Toni Kroos (Жартылай қорғаушы)</li>
+        <li>№9 — Joselu (Шабуылшы)</li>
+        <li>№10 — Luka Modrić (Жартылай қорғаушы)</li>
+        <li>№11 — Rodrygo (Шабуылшы)</li>
+        <li>№12 — Eduardo Camavinga (Жартылай қорғаушы)</li>
+        <li>№13 — Andriy Lunin (Қақпашы)</li>
+        <li>№14 — Aurélien Tchouaméni (Жартылай қорғаушы)</li>
+        <li>№15 — Federico Valverde (Жартылай қорғаушы)</li>
+        <li>№16 — Álvaro Odriozola (Қорғаушы)</li>
+        <li>№17 — Fran García (Қорғаушы)</li>
+        <li>№18 — Antonio Rüdiger (Қорғаушы)</li>
+        <li>№19 — Brahim Díaz (Жартылай қорғаушы)</li>
+        <li>№20 — Arda Güler (Жартылай қорғаушы)</li>
+        <li>№21 — Lucas Vázquez (Жартылай қорғаушы)</li>
+        <li>№22 — Ferland Mendy (Қорғаушы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Nico Paz (Жартылай қорғаушы)</li>
+        <li>№31 — Marvel (Қорғаушы)</li>
+        <li>№32 — Álvaro Carrillo (Қорғаушы)</li>
+        <li>№33 — Mario Martín (Жартылай қорғаушы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg" alt="Real Madrid Logo" class="youth-logo">
+    </div>
+  </div>
+  <!-- Liverpool -->
+  <div class="club">
+    <h2>Liverpool</h2>
+    <div class="club-info">
+      <p>Англияның ең табысты клубтарының бірі. Жастар академиясы — Kirkby Academy.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Alisson Becker (Қақпашы)</li>
+        <li>№2 — Joe Gomez (Қорғаушы)</li>
+        <li>№3 — Wataru Endō (Жартылай қорғаушы)</li>
+        <li>№4 — Virgil van Dijk (Қорғаушы)</li>
+        <li>№5 — Ibrahima Konaté (Қорғаушы)</li>
+        <li>№6 — Thiago Alcântara (Жартылай қорғаушы)</li>
+        <li>№7 — Luis Díaz (Шабуылшы)</li>
+        <li>№8 — Dominik Szoboszlai (Жартылай қорғаушы)</li>
+        <li>№9 — Darwin Núñez (Шабуылшы)</li>
+        <li>№10 — Alexis Mac Allister (Жартылай қорғаушы)</li>
+        <li>№11 — Mohamed Salah (Шабуылшы)</li>
+        <li>№12 — Caoimhín Kelleher (Қақпашы)</li>
+        <li>№13 — Adrián (Қақпашы)</li>
+        <li>№14 — Curtis Jones (Жартылай қорғаушы)</li>
+        <li>№15 — Konstantinos Tsimikas (Қорғаушы)</li>
+        <li>№16 — Andy Robertson (Қорғаушы)</li>
+        <li>№17 — Cody Gakpo (Шабуылшы)</li>
+        <li>№18 — Ryan Gravenberch (Жартылай қорғаушы)</li>
+        <li>№19 — Harvey Elliott (Жартылай қорғаушы)</li>
+        <li>№20 — Diogo Jota (Шабуылшы)</li>
+        <li>№21 — Trent Alexander-Arnold (Қорғаушы)</li>
+        <li>№22 — Jarell Quansah (Қорғаушы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Ben Doak (Шабуылшы)</li>
+        <li>№31 — Bobby Clark (Жартылай қорғаушы)</li>
+        <li>№32 — Luke Chambers (Қорғаушы)</li>
+        <li>№33 — James McConnell (Жартылай қорғаушы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool Logo" class="youth-logo">
+    </div>
+  </div>
+  <!-- Manchester City -->
+  <div class="club">
+    <h2>Manchester City</h2>
+    <div class="club-info">
+      <p>Англияның соңғы жылдардағы ең табысты клубтарының бірі. Жастар академиясы — City Football Academy.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Ederson (Қақпашы)</li>
+        <li>№2 — Kyle Walker (Қорғаушы)</li>
+        <li>№3 — Rúben Dias (Қорғаушы)</li>
+        <li>№4 — John Stones (Қорғаушы)</li>
+        <li>№5 — Manuel Akanji (Қорғаушы)</li>
+        <li>№6 — Nathan Aké (Қорғаушы)</li>
+        <li>№7 — João Cancelo (Қорғаушы)</li>
+        <li>№8 — Mateo Kovačić (Жартылай қорғаушы)</li>
+        <li>№9 — Erling Haaland (Шабуылшы)</li>
+        <li>№10 — Jack Grealish (Шабуылшы)</li>
+        <li>№11 — Jérémy Doku (Шабуылшы)</li>
+        <li>№12 — Stefan Ortega (Қақпашы)</li>
+        <li>№13 — Scott Carson (Қақпашы)</li>
+        <li>№14 — Aymeric Laporte (Қорғаушы)</li>
+        <li>№15 — Sergio Gómez (Қорғаушы)</li>
+        <li>№16 — Bernardo Silva (Жартылай қорғаушы)</li>
+        <li>№17 — Kevin De Bruyne (Жартылай қорғаушы)</li>
+        <li>№18 — Phil Foden (Жартылай қорғаушы)</li>
+        <li>№19 — Rodri (Жартылай қорғаушы)</li>
+        <li>№20 — Kalvin Phillips (Жартылай қорғаушы)</li>
+        <li>№21 — Julián Álvarez (Шабуылшы)</li>
+        <li>№22 — Oscar Bobb (Шабуылшы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Rico Lewis (Қорғаушы)</li>
+        <li>№31 — Micah Hamilton (Жартылай қорғаушы)</li>
+        <li>№32 — Jacob Wright (Қақпашы)</li>
+        <li>№33 — Joel Ndala (Шабуылшы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="Manchester City Logo" class="youth-logo">
+    </div>
+  </div>
+
+</body>
+</html>
+  <!-- Manchester United -->
+  <div class="club">
+    <h2>Manchester United</h2>
+    <div class="club-info">
+      <p>Англияның ең атақты және жанкүйері көп клубтарының бірі. Жастар академиясы — The Manchester United Academy.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — André Onana (Қақпашы)</li>
+        <li>№2 — Diogo Dalot (Қорғаушы)</li>
+        <li>№3 — Lisandro Martínez (Қорғаушы)</li>
+        <li>№4 — Raphaël Varane (Қорғаушы)</li>
+        <li>№5 — Harry Maguire (Қорғаушы)</li>
+        <li>№6 — Casemiro (Жартылай қорғаушы)</li>
+        <li>№7 — Mason Mount (Жартылай қорғаушы)</li>
+        <li>№8 — Bruno Fernandes (Жартылай қорғаушы)</li>
+        <li>№9 — Anthony Martial (Шабуылшы)</li>
+        <li>№10 — Marcus Rashford (Шабуылшы)</li>
+        <li>№11 — Rasmus Højlund (Шабуылшы)</li>
+        <li>№12 — Victor Lindelöf (Қорғаушы)</li>
+        <li>№13 — Altay Bayındır (Қақпашы)</li>
+        <li>№14 — Christian Eriksen (Жартылай қорғаушы)</li>
+        <li>№15 — Tyrell Malacia (Қорғаушы)</li>
+        <li>№16 — Amad Diallo (Шабуылшы)</li>
+        <li>№17 — Aaron Wan-Bissaka (Қорғаушы)</li>
+        <li>№18 — Kobbie Mainoo (Жартылай қорғаушы)</li>
+        <li>№19 — Alejandro Garnacho (Шабуылшы)</li>
+        <li>№20 — Luke Shaw (Қорғаушы)</li>
+        <li>№21 — Scott McTominay (Жартылай қорғаушы)</li>
+        <li>№22 — Antony (Шабуылшы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Dan Gore (Жартылай қорғаушы)</li>
+        <li>№31 — Willy Kambwala (Қорғаушы)</li>
+        <li>№32 — Joe Hugill (Шабуылшы)</li>
+        <li>№33 — Ethan Wheatley (Шабуылшы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" alt="Manchester United Logo" class="youth-logo">
+    </div>
+  </div>
+
+</body>
+</html>
+  <!-- Real Sociedad -->
+  <div class="club">
+    <h2>Real Sociedad</h2>
+    <div class="club-info">
+      <p>Испанияның бас жүлдеге таласатын тұрақты клубтарының бірі. Жастар академиясы — Zubieta.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Álex Remiro (Қақпашы)</li>
+        <li>№2 — Andoni Gorosabel (Қорғаушы)</li>
+        <li>№3 — Robin Le Normand (Қорғаушы)</li>
+        <li>№4 — Aritz Elustondo (Қорғаушы)</li>
+        <li>№5 — Igor Zubeldia (Жартылай қорғаушы)</li>
+        <li>№6 — Mikel Merino (Жартылай қорғаушы)</li>
+        <li>№7 — Brais Méndez (Жартылай қорғаушы)</li>
+        <li>№8 — Martín Zubimendi (Жартылай қорғаушы)</li>
+        <li>№9 — Umar Sadiq (Шабуылшы)</li>
+        <li>№10 — Mikel Oyarzabal (Шабуылшы)</li>
+        <li>№11 — Takefusa Kubo (Шабуылшы)</li>
+        <li>№12 — Jon Pacheco (Қорғаушы)</li>
+        <li>№13 — Mathew Ryan (Қақпашы)</li>
+        <li>№14 — Diego Rico (Қорғаушы)</li>
+        <li>№15 — Hamari Traoré (Қорғаушы)</li>
+        <li>№16 — Arsen Zakharyan (Жартылай қорғаушы)</li>
+        <li>№17 — André Silva (Шабуылшы)</li>
+        <li>№18 — Ander Barrenetxea (Шабуылшы)</li>
+        <li>№19 — Benat Turrientes (Жартылай қорғаушы)</li>
+        <li>№20 — Mohamed-Ali Cho (Шабуылшы)</li>
+        <li>№21 — Pablo Marín (Жартылай қорғаушы)</li>
+        <li>№22 — Carlos Fernández (Шабуылшы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Jon Magunacelaya (Қақпашы)</li>
+        <li>№31 — Gabilondo Iñaki (Қорғаушы)</li>
+        <li>№32 — Javi Martón (Шабуылшы)</li>
+        <li>№33 — Unai Marrero (Қақпашы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f1/Real_Sociedad_logo.svg" alt="Real Sociedad Logo" class="youth-logo">
+    </div>
+  </div>
+
+</body>
+</html>
+  <!-- Bayer 04 Leverkusen -->
+  <div class="club">
+    <h2>Bayer 04 Leverkusen</h2>
+    <div class="club-info">
+      <p>Германияның Бундеслигасындағы мықты клубтардың бірі. Жастар академиясы — NachwuchsLeistungsZentrum (NLZ).</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Lukas Hradecky (Қақпашы)</li>
+        <li>№2 — Josip Stanišić (Қорғаушы)</li>
+        <li>№3 — Piero Hincapié (Қорғаушы)</li>
+        <li>№4 — Jonathan Tah (Қорғаушы)</li>
+        <li>№5 — Edmond Tapsoba (Қорғаушы)</li>
+        <li>№6 — Robert Andrich (Жартылай қорғаушы)</li>
+        <li>№7 — Jonas Hofmann (Жартылай қорғаушы)</li>
+        <li>№8 — Granit Xhaka (Жартылай қорғаушы)</li>
+        <li>№9 — Borja Iglesias (Шабуылшы)</li>
+        <li>№10 — Florian Wirtz (Жартылай қорғаушы)</li>
+        <li>№11 — Amine Adli (Шабуылшы)</li>
+        <li>№12 — Mitchel Bakker (Қорғаушы)</li>
+        <li>№13 — Matej Kovar (Қақпашы)</li>
+        <li>№14 — Exequiel Palacios (Жартылай қорғаушы)</li>
+        <li>№15 — Alejandro Grimaldo (Қорғаушы)</li>
+        <li>№16 — Odilon Kossounou (Қорғаушы)</li>
+        <li>№17 — Adam Hložek (Шабуылшы)</li>
+        <li>№18 — Jeremie Frimpong (Қорғаушы)</li>
+        <li>№19 — Patrik Schick (Шабуылшы)</li>
+        <li>№20 — Nathan Tella (Шабуылшы)</li>
+        <li>№21 — Gustavo Puerta (Жартылай қорғаушы)</li>
+        <li>№22 — Arthur (Қорғаушы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Noah Mbamba (Жартылай қорғаушы)</li>
+        <li>№31 — Sadik Fofana (Қорғаушы)</li>
+        <li>№32 — Ayman Aourir (Жартылай қорғаушы)</li>
+        <li>№33 — Max Fischer (Қақпашы)</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Bayer_04_Leverkusen_Logo.svg" alt="Bayer 04 Logo" class="youth-logo">
+    </div>
+  </div>
+
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>
+
+  <!-- AC Milan -->
+  <div class="club">
+    <h2>AC Milan</h2>
+    <div class="club-info">
+      <p>Милан қаласынан шыққан Италияның тарихи және атақты футбол клубы. Жастар академиясы — Milan Primavera.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Mike Maignan (Қақпашы)</li>
+        <li>№2 — Davide Calabria (Қорғаушы)</li>
+        <li>№3 — Fikayo Tomori (Қорғаушы)</li>
+        <li>№4 — Malick Thiaw (Қорғаушы)</li>
+        <li>№5 — Ismaël Bennacer (Жартылай қорғаушы)</li>
+        <li>№6 — Tijjani Reijnders (Жартылай қорғаушы)</li>
+        <li>№7 — Rafael Leão (Шабуылшы)</li>
+        <li>№8 — Ruben Loftus-Cheek (Жартылай қорғаушы)</li>
+        <li>№9 — Olivier Giroud (Шабуылшы)</li>
+        <li>№10 — Christian Pulisic (Шабуылшы)</li>
+        <li>№11 — Samuel Chukwueze (Шабуылшы)</li>
+        <li>№12 — Theo Hernández (Қорғаушы)</li>
+        <li>№13 — Alessandro Florenzi (Қорғаушы)</li>
+        <li>№14 — Yunus Musah (Жартылай қорғаушы)</li>
+        <li>№15 — Simon Kjær (Қорғаушы)</li>
+        <li>№16 — Luka Jović (Шабуылшы)</li>
+        <li>№17 — Noah Okafor (Шабуылшы)</li>
+        <li>№18 — Pierre Kalulu (Қорғаушы)</li>
+        <li>№19 — Marco Sportiello (Қақпашы)</li>
+        <li>№20 — Matteo Gabbia (Қорғаушы)</li>
+        <li>№21 — Yacine Adli (Жартылай қорғаушы)</li>
+        <li>№22 — Antonio Mirante (Қақпашы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Kevin Zeroli</li>
+        <li>№31 — Jan-Carlo Simic</li>
+        <li>№32 — Francesco Camarda</li>
+        <li>№33 — Davide Bartesaghi</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg" alt="AC Milan Logo" class="youth-logo">
+    </div>
+  </div>
+  <!-- Atletico Madrid -->
+  <div class="club">
+    <h2>Atletico Madrid</h2>
+    <div class="club-info">
+      <p>Испанияның Мадрид қаласындағы беделді клуб. Жастар академиясы — Atlético Academy.</p>
+    </div>
+    <div class="players">
+      <h4>Негізгі құрам (22 ойыншы):</h4>
+      <ul>
+        <li>№1 — Jan Oblak (Қақпашы)</li>
+        <li>№2 — José María Giménez (Қорғаушы)</li>
+        <li>№3 — Mario Hermoso (Қорғаушы)</li>
+        <li>№4 — César Azpilicueta (Қорғаушы)</li>
+        <li>№5 — Koke (Жартылай қорғаушы)</li>
+        <li>№6 — Rodrigo De Paul (Жартылай қорғаушы)</li>
+        <li>№7 — Antoine Griezmann (Шабуылшы)</li>
+        <li>№8 — Saúl Ñíguez (Жартылай қорғаушы)</li>
+        <li>№9 — Álvaro Morata (Шабуылшы)</li>
+        <li>№10 — Ángel Correa (Шабуылшы)</li>
+        <li>№11 — Thomas Lemar (Жартылай қорғаушы)</li>
+        <li>№12 — Reinildo Mandava (Қорғаушы)</li>
+        <li>№13 — Ivo Grbić (Қақпашы)</li>
+        <li>№14 — Marcos Llorente (Жартылай қорғаушы)</li>
+        <li>№15 — Stefan Savić (Қорғаушы)</li>
+        <li>№16 — Pablo Barrios (Жартылай қорғаушы)</li>
+        <li>№17 — Samuel Lino (Шабуылшы)</li>
+        <li>№18 — Memphis Depay (Шабуылшы)</li>
+        <li>№19 — Nahuel Molina (Қорғаушы)</li>
+        <li>№20 — Axel Witsel (Жартылай қорғаушы)</li>
+        <li>№21 — Javi Galán (Қорғаушы)</li>
+        <li>№22 — Benjamin Lecomte (Қақпашы)</li>
+      </ul>
+      <h4>Жастар академиясы:</h4>
+      <ul>
+        <li>№30 — Adrián Niño</li>
+        <li>№31 — Javier Currás</li>
+        <li>№32 — Abde Raihani</li>
+        <li>№33 — Dani Muñoz</li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Atletico_Madrid_2017_logo.svg" alt="Atletico Madrid Logo" class="youth-logo">
+    </div>
+  </div>
+
+</body>
+</html>
+
